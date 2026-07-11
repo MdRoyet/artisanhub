@@ -15,13 +15,12 @@ export interface SeedProduct {
 }
 
 export const products: SeedProduct[] = [
-  // ── POTTERY ──
   {
-    title: "Terracotta Dinner Set — Earth Tones",
+    title: "Terracotta Dinner Set - Earth Tones",
     shortDescription:
       "A complete hand-thrown dinner set for four in warm terracotta glazes with subtle organic variations.",
     fullDescription:
-      "This stunning dinner set includes four dinner plates, four salad plates, four bowls, and four mugs, each hand-thrown on a traditional kick wheel. The terracotta glaze is applied in multiple layers and fired at 1200°C for a durable, food-safe finish. Every piece carries unique variations that make your table setting truly one of a kind.",
+      "This stunning dinner set includes four dinner plates, four salad plates, four bowls, and four mugs, each hand-thrown on a traditional kick wheel. The terracotta glaze is applied in multiple layers and fired at 1200 degrees Celsius for a durable, food-safe finish.",
     price: 245,
     categorySlug: "pottery",
     images: [
@@ -36,11 +35,11 @@ export const products: SeedProduct[] = [
     featured: true,
   },
   {
-    title: "Celadon Glaze Vase — Moonlight Series",
+    title: "Celadon Glaze Vase - Moonlight Series",
     shortDescription:
       "A tall elegant vase with a crackled celadon glaze inspired by Song Dynasty ceramics.",
     fullDescription:
-      "Standing at 35cm tall, this vase is thrown from fine porcelain clay and coated with a traditional celadon glaze that develops its characteristic crackle pattern during cooling. The pale green-blue tone shifts subtly in different lighting, earning its Moonlight Series name.",
+      "Standing at 35cm tall, this vase is thrown from fine porcelain clay and coated with a traditional celadon glaze that develops its characteristic crackle pattern during cooling. The pale green-blue tone shifts subtly in different lighting.",
     price: 189,
     categorySlug: "pottery",
     images: [
@@ -54,11 +53,11 @@ export const products: SeedProduct[] = [
     featured: true,
   },
   {
-    title: "Hand-Painted Serving Platter — Blue Willow",
+    title: "Hand-Painted Serving Platter - Blue Willow",
     shortDescription:
       "A large oval serving platter featuring hand-painted Blue Willow pattern on cream stoneware.",
     fullDescription:
-      "This generous 40cm oval platter is hand-painted with the iconic Blue Willow pattern using cobalt oxide underglaze. Each piece requires over two hours of detailed brushwork. The cream-colored stoneware body provides a warm contrast to the deep blue design. Dishwasher and microwave safe.",
+      "This generous 40cm oval platter is hand-painted with the iconic Blue Willow pattern using cobalt oxide underglaze. Each piece requires over two hours of detailed brushwork. Dishwasher and microwave safe.",
     price: 95,
     categorySlug: "pottery",
     images: [
@@ -72,11 +71,11 @@ export const products: SeedProduct[] = [
     featured: false,
   },
   {
-    title: "Raku-Fired Tea Bowl — Chawan",
+    title: "Raku-Fired Tea Bowl - Chawan",
     shortDescription:
       "A traditional Japanese tea bowl with unique raku-fired copper glaze patterns.",
     fullDescription:
-      "This chawan is created using the ancient raku firing technique, where the glowing hot bowl is pulled from the kiln at 1000°C and placed in combustible material. The rapid cooling creates unpredictable copper and gold luster patterns that make each piece completely unrepeatable.",
+      "This chawan is created using the ancient raku firing technique, where the glowing hot bowl is pulled from the kiln at 1000 degrees and placed in combustible material. The rapid cooling creates unpredictable copper and gold luster patterns.",
     price: 135,
     categorySlug: "pottery",
     images: [
@@ -89,14 +88,12 @@ export const products: SeedProduct[] = [
     artisanEmail: "yuki@demo.com",
     featured: false,
   },
-
-  // ── JEWELRY ──
   {
-    title: "Hammered Gold Band — Organic Texture",
+    title: "Hammered Gold Band - Organic Texture",
     shortDescription:
       "A wide 14k gold band with a hand-hammered organic texture that catches light beautifully.",
     fullDescription:
-      "This statement band is crafted from solid 14k yellow gold, hand-hammered to create an organic, cratered texture that sparkles in any light. The 8mm width makes it suitable as a wedding band, pinky ring, or standalone piece. Each hammer strike is placed individually, ensuring no two rings are identical.",
+      "This statement band is crafted from solid 14k yellow gold, hand-hammered to create an organic, cratered texture that sparkles in any light. The 8mm width makes it suitable as a wedding band or standalone piece.",
     price: 385,
     categorySlug: "jewelry",
     images: [
@@ -110,11 +107,11 @@ export const products: SeedProduct[] = [
     featured: true,
   },
   {
-    title: "Silver Leaf Pendant — Nature Collection",
+    title: "Silver Leaf Pendant - Nature Collection",
     shortDescription:
       "A delicate sterling silver pendant hand-sculpted into a realistic maple leaf shape.",
     fullDescription:
-      "Each leaf pendant is individually sculpted from sterling silver sheet using chasing and repoussé techniques. The veins are hand-engraved, and the edges are slightly curled to mimic a natural fallen leaf. A light oxidation patina is applied to highlight the texture. Comes with an 18-inch sterling silver chain.",
+      "Each leaf pendant is individually sculpted from sterling silver sheet using chasing and repousse techniques. The veins are hand-engraved. Comes with an 18-inch sterling silver chain.",
     price: 78,
     categorySlug: "jewelry",
     images: [
@@ -128,11 +125,11 @@ export const products: SeedProduct[] = [
     featured: true,
   },
   {
-    title: "Beaded Bohemian Necklace — Multicolor",
+    title: "Beaded Bohemian Necklace - Multicolor",
     shortDescription:
       "A layered bohemian necklace featuring hand-knotted glass beads, brass accents, and silk tassels.",
     fullDescription:
-      "This eye-catching three-strand necklace combines hand-blown glass beads in amber, teal, and cream with tiny brass spacer beads and gold-filled findings. Each strand is hand-knotted on silk thread for durability and drape. The bottom strand features a row of silk tassels. Adjustable length from 16 to 22 inches.",
+      "This eye-catching three-strand necklace combines hand-blown glass beads in amber, teal, and cream with tiny brass spacer beads. Each strand is hand-knotted on silk thread. Adjustable length from 16 to 22 inches.",
     price: 62,
     categorySlug: "jewelry",
     images: [
@@ -146,11 +143,11 @@ export const products: SeedProduct[] = [
     featured: false,
   },
   {
-    title: "Turquoise Cuff Bracelet — Southwest Style",
+    title: "Turquoise Cuff Bracelet - Southwest Style",
     shortDescription:
-      "A wide sterling silver cuff bracelet set with a natural Sleeping Beauty turquoise cabochon.",
+      "A wide sterling silver cuff bracelet set with a natural turquoise cabochon.",
     fullDescription:
-      "This bold cuff bracelet features a 20x15mm natural turquoise stone set in a handmade sterling silver bezel. The cuff is formed from heavy-gauge sterling sheet and decorated with hand-stamped geometric patterns inspired by Navajo silversmithing traditions.",
+      "This bold cuff bracelet features a 20x15mm natural turquoise stone set in a handmade sterling silver bezel. The cuff is decorated with hand-stamped geometric patterns inspired by Navajo silversmithing traditions.",
     price: 220,
     categorySlug: "jewelry",
     images: [
@@ -163,19 +160,17 @@ export const products: SeedProduct[] = [
     artisanEmail: "artisan@demo.com",
     featured: false,
   },
-
-  // ── TEXTILES ──
   {
-    title: "Handwoven Silk Scarf — Indigo Gradient",
+    title: "Handwoven Silk Scarf - Indigo Gradient",
     shortDescription:
       "A luxurious silk scarf with a hand-dyed indigo gradient pattern on a traditional floor loom.",
     fullDescription:
-      "This 180x50cm scarf is woven from pure mulberry silk on a traditional handloom, then dip-dyed in natural indigo to create a stunning gradient from deep midnight blue to pale sky blue. The weaving pattern uses a herringbone twill that adds subtle texture. The natural indigo dye improves with washing, becoming richer over time.",
+      "This 180x50cm scarf is woven from pure mulberry silk on a traditional handloom, then dip-dyed in natural indigo to create a stunning gradient from deep midnight blue to pale sky blue. The natural indigo dye improves with washing.",
     price: 145,
     categorySlug: "textiles",
     images: [
       "https://images.unsplash.com/photo-1528459105426-b9548367069b?w=800&q=80",
-      "https://images.unsplash.com/photo-1528459105426-b9548367069b?w=800&q=80",
+      "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=800&q=80",
     ],
     rating: 4.9,
     reviewCount: 44,
@@ -184,15 +179,15 @@ export const products: SeedProduct[] = [
     featured: true,
   },
   {
-    title: "Block-Printed Cotton Throw — Mughal Garden",
+    title: "Block-Printed Cotton Throw - Mughal Garden",
     shortDescription:
       "A large cotton throw blanket with hand block-printed Mughal floral motifs in crimson and gold.",
     fullDescription:
-      "This generous 150x200cm throw is printed entirely by hand using carved wooden blocks dipped in natural pigment dyes. The Mughal Garden pattern features intertwining vines, stylized flowers, and ornate borders in rich crimson, gold, and cream. A single throw involves over 300 block impressions. Pre-washed for softness.",
+      "This generous 150x200cm throw is printed entirely by hand using carved wooden blocks dipped in natural pigment dyes. The Mughal Garden pattern features intertwining vines and ornate borders. A single throw involves over 300 block impressions.",
     price: 85,
     categorySlug: "textiles",
     images: [
-      "https://images.unsplash.com/photo-1528459105426-b9548367069b?w=800&q=80",
+      "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=800&q=80",
       "https://images.unsplash.com/photo-1528459105426-b9548367069b?w=800&q=80",
     ],
     rating: 4.6,
@@ -202,16 +197,16 @@ export const products: SeedProduct[] = [
     featured: false,
   },
   {
-    title: "Embroidered Table Runner — Oaxacan Flowers",
+    title: "Embroidered Table Runner - Oaxacan Flowers",
     shortDescription:
       "A vibrant hand-embroidered table runner featuring traditional Oaxacan floral designs on natural linen.",
     fullDescription:
-      "This 180x40cm table runner is hand-embroidered by artisans in Oaxaca using the traditional satin stitch technique. The colorful floral motifs feature dahlias, marigolds, and bougainvillea in vivid fuchsia, orange, yellow, and green on a natural unbleached linen base. Machine washable on gentle cycle.",
+      "This 180x40cm table runner is hand-embroidered by artisans in Oaxaca using the traditional satin stitch technique. The colorful floral motifs feature dahlias, marigolds, and bougainvillea in vivid colors. Machine washable on gentle cycle.",
     price: 72,
     categorySlug: "textiles",
     images: [
       "https://images.unsplash.com/photo-1528459105426-b9548367069b?w=800&q=80",
-      "https://images.unsplash.com/photo-1528459105426-b9548367069b?w=800&q=80",
+      "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=800&q=80",
     ],
     rating: 4.5,
     reviewCount: 22,
@@ -219,14 +214,12 @@ export const products: SeedProduct[] = [
     artisanEmail: "marco@demo.com",
     featured: false,
   },
-
-  // ── WOODWORK ──
   {
-    title: "Walnut Cutting Board — Live Edge",
+    title: "Walnut Cutting Board - Live Edge",
     shortDescription:
       "A hand-finished black walnut cutting board with a natural live edge and food-safe mineral oil finish.",
     fullDescription:
-      "This cutting board is crafted from a single slab of locally sourced black walnut, preserving the natural live edge on one side. The surface is hand-planed and sanded through 7 grits to a glassy 2000-grit finish, then sealed with three coats of food-safe mineral oil and beeswax. Measures 45x25cm with 3.5cm thickness.",
+      "This cutting board is crafted from a single slab of locally sourced black walnut, preserving the natural live edge. The surface is hand-planed and sanded to a 2000-grit finish, then sealed with three coats of food-safe mineral oil and beeswax. Measures 45x25cm.",
     price: 120,
     categorySlug: "woodwork",
     images: [
@@ -244,7 +237,7 @@ export const products: SeedProduct[] = [
     shortDescription:
       "A set of five hand-carved olive wood cooking spoons with unique natural grain patterns.",
     fullDescription:
-      "Each spoon in this set of five is carved by hand from a single piece of Mediterranean olive wood using traditional hook knives and spokeshaves. The set includes a stirring spoon, slotted spoon, flat spatula, tasting spoon, and a small serving spoon. Olive wood is naturally antibacterial and extremely dense.",
+      "Each spoon in this set of five is carved by hand from Mediterranean olive wood using traditional hook knives. The set includes a stirring spoon, slotted spoon, flat spatula, tasting spoon, and a small serving spoon. Olive wood is naturally antibacterial.",
     price: 68,
     categorySlug: "woodwork",
     images: [
@@ -258,11 +251,11 @@ export const products: SeedProduct[] = [
     featured: false,
   },
   {
-    title: "Japanese Joinery Shelf — No Screws",
+    title: "Japanese Joinery Shelf - No Screws",
     shortDescription:
-      "A floating wall shelf assembled entirely with traditional Japanese joinery — no nails, screws, or glue.",
+      "A floating wall shelf assembled entirely with traditional Japanese joinery.",
     fullDescription:
-      "This 60cm wall shelf demonstrates the ancient Japanese art of wood joinery, where complex interlocking cuts hold the piece together without any metal hardware. Made from solid ash wood, the shelf features a through-tenon and wedge joint that is both structural and decorative. Finished with natural matting oil.",
+      "This 60cm wall shelf demonstrates the ancient Japanese art of wood joinery, where complex interlocking cuts hold the piece together without any metal hardware. Made from solid ash wood with a through-tenon and wedge joint.",
     price: 195,
     categorySlug: "woodwork",
     images: [
@@ -275,18 +268,16 @@ export const products: SeedProduct[] = [
     artisanEmail: "yuki@demo.com",
     featured: false,
   },
-
-  // ── LEATHER GOODS ──
   {
-    title: "Full-Grain Leather Tote — Vegetable Tanned",
+    title: "Full-Grain Leather Tote - Vegetable Tanned",
     shortDescription:
-      "A spacious hand-stitched tote bag made from Italian vegetable-tanned leather that develops a rich patina.",
+      "A spacious hand-stitched tote bag made from Italian vegetable-tanned leather.",
     fullDescription:
-      "This classic tote is cut from a single hide of Italian full-grain vegetable-tanned leather and hand-stitched with waxed linen thread using a traditional saddle stitch. The 40x35x12cm interior features a zip pocket and two slip pockets. The leather starts as warm medium brown and will darken beautifully over months of use.",
+      "This classic tote is cut from a single hide of Italian full-grain vegetable-tanned leather and hand-stitched with waxed linen thread using a traditional saddle stitch. The 40x35x12cm interior features a zip pocket and two slip pockets.",
     price: 310,
     categorySlug: "leather-goods",
     images: [
-      "https://images.unsplash.com/photo-1528459105426-b9548367069b?w=800&q=80",
+      "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=800&q=80",
       "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80",
     ],
     rating: 4.9,
@@ -296,16 +287,16 @@ export const products: SeedProduct[] = [
     featured: true,
   },
   {
-    title: "Leather Journal — Hand-Bound",
+    title: "Leather Journal - Hand-Bound",
     shortDescription:
       "A refillable leather journal with hand-stitched Coptic binding and 200 pages of cotton paper.",
     fullDescription:
-      "This A5 journal features a wrap-around leather cover with a natural bark texture and a hand-braided leather closure. Inside, 200 pages of acid-free cotton rag paper are bound using the Coptic stitch method, allowing the journal to lay completely flat when open. Made from 2mm vegetable-tanned cowhide with burnished edges.",
+      "This A5 journal features a wrap-around leather cover with a natural bark texture and hand-braided leather closure. Inside, 200 pages of acid-free cotton rag paper are bound using the Coptic stitch method, allowing the journal to lay completely flat.",
     price: 55,
     categorySlug: "leather-goods",
     images: [
       "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80",
-      "https://images.unsplash.com/photo-1528459105426-b9548367069b?w=800&q=80",
+      "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=800&q=80",
     ],
     rating: 4.6,
     reviewCount: 71,
@@ -314,15 +305,15 @@ export const products: SeedProduct[] = [
     featured: false,
   },
   {
-    title: "Minimalist Leather Wallet — Bifold",
+    title: "Minimalist Leather Wallet - Bifold",
     shortDescription:
       "A slim bifold wallet in Horween leather with hand-burnished edges and six card slots.",
     fullDescription:
-      "This minimalist bifold is crafted from Chicago-based Horween Chromexcel leather, renowned for its rich pull-up effect and exceptional durability. The wallet features six card slots, two bill compartments, and a hidden pocket in a compact 11x9cm package. Stitched with tiger thread in a contrasting natural tone.",
+      "This minimalist bifold is crafted from Horween Chromexcel leather, renowned for its rich pull-up effect and exceptional durability. Features six card slots, two bill compartments, and a hidden pocket in a compact 11x9cm package.",
     price: 89,
     categorySlug: "leather-goods",
     images: [
-      "https://images.unsplash.com/photo-1528459105426-b9548367069b?w=800&q=80",
+      "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=800&q=80",
       "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80",
     ],
     rating: 4.8,
@@ -331,19 +322,17 @@ export const products: SeedProduct[] = [
     artisanEmail: "marco@demo.com",
     featured: false,
   },
-
-  // ── METALWORK ──
   {
-    title: "Hand-Forged Wok — Carbon Steel",
+    title: "Hand-Forged Wok - Carbon Steel",
     shortDescription:
       "A 14-inch carbon steel wok hand-forged from a single sheet and seasoned with flaxseed oil.",
     fullDescription:
-      "This wok is hammer-forged by hand from a single disc of 2mm carbon steel, creating a slightly irregular shape that actually improves stir-fry performance by creating hot and cool zones. The hammer marks increase surface area for better seasoning adhesion and food release. Pre-seasoned with three coats of flaxseed oil.",
+      "This wok is hammer-forged by hand from a single disc of 2mm carbon steel, creating a slightly irregular shape that improves stir-fry performance by creating hot and cool zones. Pre-seasoned with three coats of flaxseed oil.",
     price: 135,
     categorySlug: "metalwork",
     images: [
       "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80",
-      "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80",
+      "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=800&q=80",
     ],
     rating: 4.7,
     reviewCount: 39,
@@ -352,15 +341,15 @@ export const products: SeedProduct[] = [
     featured: true,
   },
   {
-    title: "Copper Hammered Planter — Medium",
+    title: "Copper Hammered Planter - Medium",
     shortDescription:
       "A hand-hammered pure copper planter with a living patina that evolves over time.",
     fullDescription:
-      "This 25cm diameter planter is formed from 1.2mm pure copper sheet, hand-hammered into a rounded form with a textured surface. No lacquer is applied, allowing the copper to develop a natural living patina. Includes a matching copper drip tray and drainage holes. Perfect for a medium-sized houseplant.",
+      "This 25cm diameter planter is formed from 1.2mm pure copper sheet, hand-hammered into a rounded form. No lacquer is applied, allowing the copper to develop a natural living patina. Includes a matching copper drip tray and drainage holes.",
     price: 165,
     categorySlug: "metalwork",
     images: [
-      "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80",
+      "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=800&q=80",
       "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80",
     ],
     rating: 4.5,
