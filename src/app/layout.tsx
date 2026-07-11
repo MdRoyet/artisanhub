@@ -1,8 +1,10 @@
 // src/app/layout.tsx
+
 import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/sonner";
+import { AuthProvider } from "@/context/auth-context";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -33,8 +35,10 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
       <body className="min-h-screen flex flex-col">
-        <div className="flex-1">{children}</div>
-        <Toaster richColors position="top-right" />
+        <AuthProvider>
+          <div className="flex-1">{children}</div>
+          <Toaster richColors position="top-right" />
+        </AuthProvider>
       </body>
     </html>
   );
