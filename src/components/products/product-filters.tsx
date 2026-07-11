@@ -61,8 +61,9 @@ export function ProductFilters({
   };
 
   const getPriceLabel = () => {
-    if (!currentPriceValue) return null;
-    const range = PRICE_RANGES.find((r) => r.value === currentPriceValue);
+    if (!minPrice && !maxPrice) return null;
+    const val = `${minPrice || "0"}-${maxPrice || ""}`;
+    const range = PRICE_RANGES.find((r) => r.value === val);
     return range ? range.label : null;
   };
 
@@ -70,11 +71,6 @@ export function ProductFilters({
     if (!rating) return null;
     const opt = RATING_FILTER_OPTIONS.find((r) => r.value === rating);
     return opt ? opt.label : null;
-  };
-
-  const getSortLabel = () => {
-    const opt = SORT_OPTIONS.find((s) => s.value === sort);
-    return opt ? opt.label : "Newest First";
   };
 
   return (
@@ -87,7 +83,7 @@ export function ProductFilters({
 
         {/* Category */}
         <Select
-          value={category || undefined}
+          value={category}
           onValueChange={(v) => setCategory(v === "__none__" ? "" : v)}
         >
           <SelectTrigger className="w-[155px] h-9 text-sm">
@@ -105,7 +101,7 @@ export function ProductFilters({
 
         {/* Price Range */}
         <Select
-          value={currentPriceValue || undefined}
+          value={currentPriceValue}
           onValueChange={(value) => {
             if (value === "__none__") {
               setMinPrice("");
@@ -134,7 +130,7 @@ export function ProductFilters({
 
         {/* Rating */}
         <Select
-          value={rating || undefined}
+          value={rating}
           onValueChange={(v) => setRating(v === "__none__" ? "" : v)}
         >
           <SelectTrigger className="w-[155px] h-9 text-sm">
