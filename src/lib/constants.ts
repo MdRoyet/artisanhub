@@ -17,18 +17,18 @@ export const SORT_OPTIONS = [
 
 export const RATING_FILTER_OPTIONS = [
   { label: "All Ratings", value: "" },
-  { label: "4â˜… & above", value: "4" },
-  { label: "3â˜… & above", value: "3" },
-  { label: "2â˜… & above", value: "2" },
+  { label: "4 stars and above", value: "4" },
+  { label: "3 stars and above", value: "3" },
+  { label: "2 stars and above", value: "2" },
 ] as const;
 
 export const PRICE_RANGES = [
-  { label: "All Prices", value: "" },
-  { label: "Under $25", min: "0", max: "25" },
-  { label: "$25 â€“ $50", min: "25", max: "50" },
-  { label: "$50 â€“ $100", min: "50", max: "100" },
-  { label: "$100 â€“ $200", min: "100", max: "200" },
-  { label: "Over $200", min: "200", max: "" },
+  { label: "All Prices", value: "", min: "", max: "" },
+  { label: "Under $25", value: "0-25", min: "0", max: "25" },
+  { label: "$25 - $50", value: "25-50", min: "25", max: "50" },
+  { label: "$50 - $100", value: "50-100", min: "50", max: "100" },
+  { label: "$100 - $200", value: "100-200", min: "100", max: "200" },
+  { label: "Over $200", value: "200-", min: "200", max: "" },
 ] as const;
 
 export const NAV_LINKS_PUBLIC = [
@@ -105,7 +105,7 @@ export const TESTIMONIALS = [
     avatar:
       "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=200&q=80",
     comment:
-      "ArtisanHub transformed my clients' homes. The terracotta dinner set and handwoven throws are always conversation starters. The quality is unmatched by anything I've found in retail stores.",
+      "ArtisanHub transformed my clients' homes. The terracotta dinner set and handwoven throws are always conversation starters. The quality is unmatched by anything I have found in retail stores.",
     rating: 5,
   },
   {
@@ -114,7 +114,7 @@ export const TESTIMONIALS = [
     avatar:
       "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=200&q=80",
     comment:
-      "I've ordered six different pieces over the past year and each one exceeded my expectations. The hammered gold band is my daily wear now. You can feel the craftsmanship in every detail.",
+      "I have ordered six different pieces over the past year and each one exceeded my expectations. The hammered gold band is my daily wear now. You can feel the craftsmanship in every detail.",
     rating: 5,
   },
   {
@@ -123,7 +123,7 @@ export const TESTIMONIALS = [
     avatar:
       "https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=200&q=80",
     comment:
-      "The silk scarf I ordered has the most beautiful gradient I've ever seen. My clients always ask where I find these unique pieces. ArtisanHub is my secret weapon for styling.",
+      "The silk scarf I ordered has the most beautiful gradient I have ever seen. My clients always ask where I find these unique pieces. ArtisanHub is my secret weapon for styling.",
     rating: 5,
   },
   {
@@ -161,7 +161,7 @@ export const FAQ_ITEMS = [
   {
     question: "Can I commission a custom piece?",
     answer:
-      "Many of our artisans accept custom commissions. You can browse their profiles and reach out directly through the 'Contact Artisan' button on any product page. Custom orders typically take 3-6 weeks depending on complexity.",
+      "Many of our artisans accept custom commissions. You can browse their profiles and reach out directly through the Contact Artisan button on any product page. Custom orders typically take 3-6 weeks depending on complexity.",
   },
   {
     question: "How are artisans verified on ArtisanHub?",

@@ -126,7 +126,7 @@ export function RegisterForm() {
                 id="password"
                 name="password"
                 type={showPassword ? "text" : "password"}
-                placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢"
+                placeholder="Enter your password"
                 autoComplete="new-password"
                 disabled={isSubmitting}
                 className="pr-10"

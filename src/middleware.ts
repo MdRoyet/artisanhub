@@ -15,7 +15,7 @@ export function middleware(request: NextRequest) {
     // But we can still block direct server-side rendering for protected pages
     const token = request.cookies.get("token")?.value;
 
-    // If no token in cookies, we let it through â€” the AuthGuard handles the redirect
+    // If no token in cookies, we let it through - the AuthGuard handles the redirect
     // This middleware is mainly for future cookie-based auth enhancement
   }
 

@@ -29,7 +29,7 @@ export async function POST(req: NextRequest) {
 
     await connectDB();
 
-    // Find user â€” MUST include password since it's hidden by default
+    // Find user MUST include password since it's hidden by default
     const user = await User.findOne({ email: result.data.email }).select(
       "+password",
     );

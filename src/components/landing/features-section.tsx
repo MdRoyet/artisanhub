@@ -5,7 +5,7 @@ const features = [
     icon: HandHeart,
     title: "100% Handcrafted",
     description:
-      "Every product is made by hand using traditional techniques. No factory lines, no mass production â€” just authentic artisan craftsmanship.",
+      "Every product is made by hand using traditional techniques. No factory lines, no mass production - just authentic artisan craftsmanship.",
   },
   {
     icon: Truck,
