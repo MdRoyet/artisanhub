@@ -1,33 +1,62 @@
-// src/app/page.tsx (temporary — will be replaced in Step 8)
-export default function Home() {
+// src/app/(main)/page.tsx
+
+import { connectDB } from "@/lib/db";
+import { Category, Product } from "@/models";
+import { HeroSection } from "@/components/landing/hero-section";
+import { FeaturesSection } from "@/components/landing/features-section";
+import { CategoriesSection } from "@/components/landing/categories-section";
+import { FeaturedProducts } from "@/components/landing/featured-products";
+import { HowItWorksSection } from "@/components/landing/how-it-works-section";
+import { StatisticsSection } from "@/components/landing/statistics-section";
+import { TestimonialsSection } from "@/components/landing/testimonials-section";
+import { NewsletterSection } from "@/components/landing/newsletter-section";
+import { FAQSection } from "@/components/landing/faq-section";
+import { CTASection } from "@/components/landing/cta-section";
+
+export default async function HomePage() {
+  await connectDB();
+
+  // Fetch real data from database
+  const categories = await Category.find().sort({ productCount: -1 }).lean();
+  const products = await Product.find({ featured: true })
+    .sort({ createdAt: -1 })
+    .limit(4)
+    .lean();
+
+  // Calculate stats from DB
+  const totalProducts = await Product.countDocuments();
+  const totalCategories = await Category.countDocuments();
+  const totalArtisans = await Product.distinct("artisan").length;
+  const avgRatingResult = await Product.aggregate([
+    { $group: { _id: null, avgRating: { $avg: "$rating" } } },
+  ]);
+  const averageRating = avgRatingResult[0]?.avgRating
+    ? Number(avgRatingResult[0].avgRating.toFixed(1))
+    : 0;
+
+  // Serialize MongoDB documents
+  const serializedCategories = JSON.parse(JSON.stringify(categories));
+  const serializedProducts = JSON.parse(JSON.stringify(products));
+
+  const stats = [
+    { label: "Handcrafted Products", value: totalProducts, suffix: "+" },
+    { label: "Skilled Artisans", value: totalArtisans, suffix: "+" },
+    { label: "Craft Categories", value: totalCategories, suffix: "" },
+    { label: "Average Rating", value: averageRating * 10, suffix: "/5" },
+  ];
+
   return (
-    <main className="flex items-center justify-center min-h-screen">
-      <div className="text-center space-y-4">
-        <h1 className="text-4xl md:text-5xl font-heading font-bold text-secondary">
-          ArtisanHub
-        </h1>
-        <p className="text-muted-foreground text-lg">
-          Handcrafted Marketplace — Setup Complete ✓
-        </p>
-        <div className="flex gap-3 justify-center pt-4">
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium">
-            <span className="w-2 h-2 rounded-full bg-primary" />
-            Next.js
-          </span>
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium">
-            <span className="w-2 h-2 rounded-full bg-primary" />
-            TypeScript
-          </span>
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium">
-            <span className="w-2 h-2 rounded-full bg-primary" />
-            Tailwind
-          </span>
-          <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-primary/10 text-primary text-sm font-medium">
-            <span className="w-2 h-2 rounded-full bg-primary" />
-            shadcn/ui
-          </span>
-        </div>
-      </div>
-    </main>
+    <>
+      <HeroSection />
+      <FeaturesSection />
+      <CategoriesSection categories={serializedCategories} />
+      <FeaturedProducts products={serializedProducts} />
+      <HowItWorksSection />
+      <StatisticsSection stats={stats} />
+      <TestimonialsSection />
+      <NewsletterSection />
+      <FAQSection />
+      <CTASection />
+    </>
   );
 }
