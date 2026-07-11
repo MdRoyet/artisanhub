@@ -43,7 +43,7 @@ const CategorySchema = new Schema<ICategoryDocument>(
   },
 );
 
-// Removed duplicate index — unique: true already creates an index
+// Removed duplicate index â€” unique: true already creates an index
 
 export default mongoose.models.Category ||
   mongoose.model<ICategoryDocument>("Category", CategorySchema);

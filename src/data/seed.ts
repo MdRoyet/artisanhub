@@ -14,29 +14,29 @@ import { reviews } from "./seed-reviews";
 const MONGODB_URI = process.env.MONGODB_URI!;
 
 async function seed() {
-  console.log("🌱 Connecting to MongoDB...");
+  console.log("ðŸŒ± Connecting to MongoDB...");
   await mongoose.connect(MONGODB_URI);
-  console.log("✅ Connected!");
+  console.log("âœ… Connected!");
 
   // Clear existing data
-  console.log("🧹 Clearing existing collections...");
+  console.log("ðŸ§¹ Clearing existing collections...");
   await User.deleteMany({});
   await Category.deleteMany({});
   await Product.deleteMany({});
   await Review.deleteMany({});
 
   // Seed users
-  console.log("👤 Seeding users...");
+  console.log("ðŸ‘¤ Seeding users...");
   const createdUsers = await User.create(users);
   const userMap = new Map(createdUsers.map((u) => [u.email, u._id]));
 
   // Seed categories
-  console.log("📁 Seeding categories...");
+  console.log("ðŸ“ Seeding categories...");
   const createdCategories = await Category.create(categories);
   const categoryMap = new Map(createdCategories.map((c) => [c.slug, c._id]));
 
   // Seed products
-  console.log("📦 Seeding products...");
+  console.log("ðŸ“¦ Seeding products...");
   const productsWithIds = products.map((p) => ({
     ...p,
     category: categoryMap.get(p.categorySlug)!,
@@ -55,7 +55,7 @@ async function seed() {
   const productMap = new Map(createdProducts.map((p) => [p.title, p._id]));
 
   // Seed reviews
-  console.log("⭐ Seeding reviews...");
+  console.log("â­ Seeding reviews...");
   const userIds = Array.from(userMap.values());
 
   const reviewsWithIds = reviews.map((r, index) => ({
@@ -69,13 +69,13 @@ async function seed() {
   await Review.create(reviewsWithIds);
 
   // Update category product counts
-  console.log("📊 Updating category product counts...");
+  console.log("ðŸ“Š Updating category product counts...");
   for (const [slug, catId] of categoryMap) {
     const count = await Product.countDocuments({ category: catId });
     await Category.findByIdAndUpdate(catId, { productCount: count });
   }
 
-  console.log("\n🎉 Seed completed successfully!");
+  console.log("\nðŸŽ‰ Seed completed successfully!");
   console.log(`   Users: ${createdUsers.length}`);
   console.log(`   Categories: ${createdCategories.length}`);
   console.log(`   Products: ${createdProducts.length}`);
@@ -85,10 +85,10 @@ async function seed() {
   console.log("  Admin: admin@artisanhub.com / admin1234");
 
   await mongoose.disconnect();
-  console.log("👋 Disconnected from MongoDB.");
+  console.log("ðŸ‘‹ Disconnected from MongoDB.");
 }
 
 seed().catch((err) => {
-  console.error("❌ Seed failed:", err);
+  console.error("âŒ Seed failed:", err);
   process.exit(1);
 });

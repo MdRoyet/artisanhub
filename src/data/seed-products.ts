@@ -1,4 +1,4 @@
-﻿// src/data/seed-products.ts
+// src/data/seed-products.ts
 
 export interface SeedProduct {
   title: string;
@@ -175,7 +175,7 @@ export const products: SeedProduct[] = [
     categorySlug: "textiles",
     images: [
       "https://images.unsplash.com/photo-1528459105426-b9548367069b?w=800&q=80",
-      "https://images.unsplash.com/photo-1596568860170-00ef9c043d71?w=800&q=80",
+      "https://images.unsplash.com/photo-1528459105426-b9548367069b?w=800&q=80",
     ],
     rating: 4.9,
     reviewCount: 44,
@@ -192,7 +192,7 @@ export const products: SeedProduct[] = [
     price: 85,
     categorySlug: "textiles",
     images: [
-      "https://images.unsplash.com/photo-1596568860170-00ef9c043d71?w=800&q=80",
+      "https://images.unsplash.com/photo-1528459105426-b9548367069b?w=800&q=80",
       "https://images.unsplash.com/photo-1528459105426-b9548367069b?w=800&q=80",
     ],
     rating: 4.6,
@@ -211,7 +211,7 @@ export const products: SeedProduct[] = [
     categorySlug: "textiles",
     images: [
       "https://images.unsplash.com/photo-1528459105426-b9548367069b?w=800&q=80",
-      "https://images.unsplash.com/photo-1596568860170-00ef9c043d71?w=800&q=80",
+      "https://images.unsplash.com/photo-1528459105426-b9548367069b?w=800&q=80",
     ],
     rating: 4.5,
     reviewCount: 22,
@@ -230,7 +230,7 @@ export const products: SeedProduct[] = [
     price: 120,
     categorySlug: "woodwork",
     images: [
-      "https://images.unsplash.com/photo-1556442261-e5e1dade909e?w=800&q=80",
+      "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80",
       "https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=800&q=80",
     ],
     rating: 4.8,
@@ -248,7 +248,7 @@ export const products: SeedProduct[] = [
     price: 68,
     categorySlug: "woodwork",
     images: [
-      "https://images.unsplash.com/photo-1556442261-e5e1dade909e?w=800&q=80",
+      "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80",
       "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=800&q=80",
     ],
     rating: 4.7,
@@ -266,7 +266,7 @@ export const products: SeedProduct[] = [
     price: 195,
     categorySlug: "woodwork",
     images: [
-      "https://images.unsplash.com/photo-1556442261-e5e1dade909e?w=800&q=80",
+      "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80",
       "https://images.unsplash.com/photo-1493106641515-6b5631de4bb9?w=800&q=80",
     ],
     rating: 4.9,
@@ -286,8 +286,8 @@ export const products: SeedProduct[] = [
     price: 310,
     categorySlug: "leather-goods",
     images: [
-      "https://images.unsplash.com/photo-1596568860170-00ef9c043d71?w=800&q=80",
-      "https://images.unsplash.com/photo-1556442261-e5e1dade909e?w=800&q=80",
+      "https://images.unsplash.com/photo-1528459105426-b9548367069b?w=800&q=80",
+      "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80",
     ],
     rating: 4.9,
     reviewCount: 56,
@@ -304,8 +304,8 @@ export const products: SeedProduct[] = [
     price: 55,
     categorySlug: "leather-goods",
     images: [
-      "https://images.unsplash.com/photo-1556442261-e5e1dade909e?w=800&q=80",
-      "https://images.unsplash.com/photo-1596568860170-00ef9c043d71?w=800&q=80",
+      "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80",
+      "https://images.unsplash.com/photo-1528459105426-b9548367069b?w=800&q=80",
     ],
     rating: 4.6,
     reviewCount: 71,
@@ -322,8 +322,8 @@ export const products: SeedProduct[] = [
     price: 89,
     categorySlug: "leather-goods",
     images: [
-      "https://images.unsplash.com/photo-1596568860170-00ef9c043d71?w=800&q=80",
-      "https://images.unsplash.com/photo-1556442261-e5e1dade909e?w=800&q=80",
+      "https://images.unsplash.com/photo-1528459105426-b9548367069b?w=800&q=80",
+      "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80",
     ],
     rating: 4.8,
     reviewCount: 83,
@@ -343,7 +343,7 @@ export const products: SeedProduct[] = [
     categorySlug: "metalwork",
     images: [
       "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80",
-      "https://images.unsplash.com/photo-1556442261-e5e1dade909e?w=800&q=80",
+      "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80",
     ],
     rating: 4.7,
     reviewCount: 39,
@@ -360,7 +360,7 @@ export const products: SeedProduct[] = [
     price: 165,
     categorySlug: "metalwork",
     images: [
-      "https://images.unsplash.com/photo-1556442261-e5e1dade909e?w=800&q=80",
+      "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80",
       "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80",
     ],
     rating: 4.5,

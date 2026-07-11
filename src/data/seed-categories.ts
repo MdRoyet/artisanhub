@@ -29,7 +29,7 @@ export const categories = [
     description:
       "Carved, turned, and joined wooden pieces made from sustainably harvested hardwoods, finished with natural oils and traditional joinery methods.",
     image:
-      "https://images.unsplash.com/photo-1556442261-e5e1dade909e?w=800&q=80",
+      "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80",
   },
   {
     name: "Leather Goods",
@@ -37,7 +37,7 @@ export const categories = [
     description:
       "Hand-stitched leather goods crafted from full-grain vegetable-tanned leather, developing a beautiful patina with age and use.",
     image:
-      "https://images.unsplash.com/photo-1596568860170-00ef9c043d71?w=800&q=80",
+      "https://images.unsplash.com/photo-1528459105426-b9548367069b?w=800&q=80",
   },
   {
     name: "Metalwork",

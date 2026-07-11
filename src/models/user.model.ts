@@ -50,7 +50,7 @@ const UserSchema = new Schema<IUserDocument>(
   },
 );
 
-// Removed duplicate index — unique: true already creates an index
+// Removed duplicate index â€” unique: true already creates an index
 
 // Mongoose 8+ pre hook (no next parameter)
 UserSchema.pre("save", async function () {

@@ -10,7 +10,7 @@ export default function AddProductPage() {
           Add Product
         </h1>
         <p className="mt-2 text-muted-foreground">
-          Coming in Step 13 — Protected Page ✓
+          Coming in Step 13 â€” Protected Page âœ“
         </p>
       </div>
     </AuthGuard>

@@ -1,4 +1,4 @@
-﻿// src/lib/constants.ts
+// src/lib/constants.ts
 
 export const APP_NAME = "ArtisanHub";
 export const APP_DESCRIPTION =
@@ -85,7 +85,7 @@ export const HERO_SLIDES = [
     cta: "Meet Our Artisans",
     ctaHref: "/about",
     image:
-      "https://images.unsplash.com/photo-1556442261-e5e1dade909e?w=1200&q=80",
+      "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=1200&q=80",
   },
   {
     title: "One of a Kind",
@@ -112,7 +112,7 @@ export const TESTIMONIALS = [
     name: "James Walker",
     role: "Collector",
     avatar:
-      "https://images.unsplash.com/photo-1556442261-e5e1dade909e?w=200&q=80",
+      "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=200&q=80",
     comment:
       "I've ordered six different pieces over the past year and each one exceeded my expectations. The hammered gold band is my daily wear now. You can feel the craftsmanship in every detail.",
     rating: 5,

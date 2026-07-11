@@ -20,7 +20,7 @@ const playfair = Playfair_Display({
 
 export const metadata: Metadata = {
   title: {
-    default: "ArtisanHub — Handcrafted Marketplace",
+    default: "ArtisanHub - Handcrafted Marketplace",
     template: "%s | ArtisanHub",
   },
   description:

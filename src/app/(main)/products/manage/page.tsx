@@ -10,7 +10,7 @@ export default function ManageProductsPage() {
           Manage Products
         </h1>
         <p className="mt-2 text-muted-foreground">
-          Coming in Step 14 — Protected Page ✓
+          Coming in Step 14 â€” Protected Page âœ“
         </p>
       </div>
     </AuthGuard>

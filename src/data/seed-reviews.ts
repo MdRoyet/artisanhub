@@ -8,21 +8,21 @@ export interface SeedReview {
 export const reviews: SeedReview[] = [
   // Terracotta Dinner Set
   {
-    productTitle: "Terracotta Dinner Set — Earth Tones",
+    productTitle: "Terracotta Dinner Set â€” Earth Tones",
     userName: "Sarah Mitchell",
     rating: 5,
     comment:
       "Absolutely stunning set. Every piece has its own character and the glaze color is even more beautiful in person. Gets compliments every dinner party.",
   },
   {
-    productTitle: "Terracotta Dinner Set — Earth Tones",
+    productTitle: "Terracotta Dinner Set â€” Earth Tones",
     userName: "David Chen",
     rating: 5,
     comment:
       "Shipped securely with excellent packaging. The quality is restaurant-grade. We've been using them daily for three months and they still look brand new.",
   },
   {
-    productTitle: "Terracotta Dinner Set — Earth Tones",
+    productTitle: "Terracotta Dinner Set â€” Earth Tones",
     userName: "Emma Rodriguez",
     rating: 4,
     comment:
@@ -31,30 +31,30 @@ export const reviews: SeedReview[] = [
 
   // Hammered Gold Band
   {
-    productTitle: "Hammered Gold Band — Organic Texture",
+    productTitle: "Hammered Gold Band â€” Organic Texture",
     userName: "James Walker",
     rating: 5,
     comment:
       "Used this as my wedding band. The hammered texture is subtle but catches light beautifully. My wife and I both got matching ones and we love them.",
   },
   {
-    productTitle: "Hammered Gold Band — Organic Texture",
+    productTitle: "Hammered Gold Band â€” Organic Texture",
     userName: "Lisa Park",
     rating: 5,
     comment:
-      "The weight is perfect — substantial without being heavy. The organic texture makes it feel like a piece of art, not just jewelry.",
+      "The weight is perfect â€” substantial without being heavy. The organic texture makes it feel like a piece of art, not just jewelry.",
   },
 
   // Handwoven Silk Scarf
   {
-    productTitle: "Handwoven Silk Scarf — Indigo Gradient",
+    productTitle: "Handwoven Silk Scarf â€” Indigo Gradient",
     userName: "Nina Kowalski",
     rating: 5,
     comment:
-      "The gradient is mesmerizing. You can feel the quality the moment you touch it — this is real silk, not the synthetic stuff. The indigo scent lasted for weeks.",
+      "The gradient is mesmerizing. You can feel the quality the moment you touch it â€” this is real silk, not the synthetic stuff. The indigo scent lasted for weeks.",
   },
   {
-    productTitle: "Handwoven Silk Scarf — Indigo Gradient",
+    productTitle: "Handwoven Silk Scarf â€” Indigo Gradient",
     userName: "Rachel Adams",
     rating: 5,
     comment:
@@ -63,14 +63,14 @@ export const reviews: SeedReview[] = [
 
   // Full-Grain Leather Tote
   {
-    productTitle: "Full-Grain Leather Tote — Vegetable Tanned",
+    productTitle: "Full-Grain Leather Tote â€” Vegetable Tanned",
     userName: "Megan Foster",
     rating: 5,
     comment:
       "Six months in and the patina is developing beautifully. This bag will outlast me. The saddle stitching gives me confidence it will never come apart.",
   },
   {
-    productTitle: "Full-Grain Leather Tote — Vegetable Tanned",
+    productTitle: "Full-Grain Leather Tote â€” Vegetable Tanned",
     userName: "Tom Richards",
     rating: 4,
     comment:
@@ -79,14 +79,14 @@ export const reviews: SeedReview[] = [
 
   // Walnut Cutting Board
   {
-    productTitle: "Walnut Cutting Board — Live Edge",
+    productTitle: "Walnut Cutting Board â€” Live Edge",
     userName: "Chris Nakamura",
     rating: 5,
     comment:
       "This is a showpiece. The live edge is gorgeous and the finish is silky smooth. I actually display it on my kitchen island when not using it.",
   },
   {
-    productTitle: "Walnut Cutting Board — Live Edge",
+    productTitle: "Walnut Cutting Board â€” Live Edge",
     userName: "Angela Brooks",
     rating: 5,
     comment:
@@ -95,14 +95,14 @@ export const reviews: SeedReview[] = [
 
   // Hand-Forged Wok
   {
-    productTitle: "Hand-Forged Wok — Carbon Steel",
+    productTitle: "Hand-Forged Wok â€” Carbon Steel",
     userName: "Kevin Liu",
     rating: 5,
     comment:
       "As someone who grew up using hand-hammered woks, this is the real deal. The hammer marks make a real difference in seasoning and food release. Wok hei is achievable at home!",
   },
   {
-    productTitle: "Hand-Forged Wok — Carbon Steel",
+    productTitle: "Hand-Forged Wok â€” Carbon Steel",
     userName: "Maria Gonzalez",
     rating: 4,
     comment:
@@ -111,7 +111,7 @@ export const reviews: SeedReview[] = [
 
   // Celadon Glaze Vase
   {
-    productTitle: "Celadon Glaze Vase — Moonlight Series",
+    productTitle: "Celadon Glaze Vase â€” Moonlight Series",
     userName: "Patricia Yu",
     rating: 5,
     comment:
@@ -120,7 +120,7 @@ export const reviews: SeedReview[] = [
 
   // Minimalist Leather Wallet
   {
-    productTitle: "Minimalist Leather Wallet — Bifold",
+    productTitle: "Minimalist Leather Wallet â€” Bifold",
     userName: "Ryan O'Brien",
     rating: 5,
     comment:
@@ -129,7 +129,7 @@ export const reviews: SeedReview[] = [
 
   // Silver Leaf Pendant
   {
-    productTitle: "Silver Leaf Pendant — Nature Collection",
+    productTitle: "Silver Leaf Pendant â€” Nature Collection",
     userName: "Julia Chen",
     rating: 5,
     comment:
@@ -138,7 +138,7 @@ export const reviews: SeedReview[] = [
 
   // Block-Printed Cotton Throw
   {
-    productTitle: "Block-Printed Cotton Throw — Mughal Garden",
+    productTitle: "Block-Printed Cotton Throw â€” Mughal Garden",
     userName: "Amanda Smith",
     rating: 5,
     comment:
@@ -147,7 +147,7 @@ export const reviews: SeedReview[] = [
 
   // Japanese Joinery Shelf
   {
-    productTitle: "Japanese Joinery Shelf — No Screws",
+    productTitle: "Japanese Joinery Shelf â€” No Screws",
     userName: "Daniel Kim",
     rating: 5,
     comment:
