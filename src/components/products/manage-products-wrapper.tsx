@@ -8,5 +8,5 @@ export function ManageProductsWrapper() {
 
   if (!user) return null;
 
-  return <ManageProducts userId={user._id} />;
+  return <ManageProducts userId={user._id} role={user.role} />;
 }

@@ -29,12 +29,15 @@ import type { Product } from "@/types";
 
 interface ManageProductsProps {
   userId: string;
+  role: "user" | "admin";
 }
 
-export function ManageProducts({ userId }: ManageProductsProps) {
+export function ManageProducts({ userId, role }: ManageProductsProps) {
   const [products, setProducts] = useState<Product[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [deletingId, setDeletingId] = useState<string | null>(null);
+
+  const isAdmin = role === "admin";
 
   const fetchProducts = useCallback(async () => {
     setIsLoading(true);
@@ -42,17 +45,23 @@ export function ManageProducts({ userId }: ManageProductsProps) {
       const res = await fetch("/api/products?limit=100");
       const json = await res.json();
       if (json.success) {
-        const myProducts = json.data.filter(
-          (p: Product) => p.artisan === userId,
-        );
-        setProducts(myProducts);
+        if (isAdmin) {
+          // Admin sees ALL products
+          setProducts(json.data);
+        } else {
+          // Regular user sees only their own
+          const myProducts = json.data.filter(
+            (p: Product) => p.artisan === userId,
+          );
+          setProducts(myProducts);
+        }
       }
     } catch {
-      toast.error("Failed to load your products");
+      toast.error("Failed to load products");
     } finally {
       setIsLoading(false);
     }
-  }, [userId]);
+  }, [userId, isAdmin]);
 
   useEffect(() => {
     fetchProducts();
@@ -114,15 +123,18 @@ export function ManageProducts({ userId }: ManageProductsProps) {
           <PackageOpen className="h-10 w-10 text-muted-foreground" />
         </div>
         <h3 className="text-lg font-semibold text-foreground mb-2">
-          No products yet
+          {isAdmin ? "No products yet" : "No products yet"}
         </h3>
         <p className="text-sm text-muted-foreground max-w-md mx-auto mb-6">
-          You have not listed any products yet. Start by adding your first
-          handcrafted item.
+          {isAdmin
+            ? "No products have been listed on the platform yet."
+            : "You have not listed any products yet. Start by adding your first handcrafted item."}
         </p>
-        <Button asChild>
-          <Link href="/products/add">Add Your First Product</Link>
-        </Button>
+        {!isAdmin && (
+          <Button asChild>
+            <Link href="/products/add">Add Your First Product</Link>
+          </Button>
+        )}
       </div>
     );
   }
@@ -171,6 +183,11 @@ export function ManageProducts({ userId }: ManageProductsProps) {
                 <Badge className="text-[10px] px-1.5 py-0 bg-primary/10 text-primary border-0">
                   Featured
                 </Badge>
+              )}
+              {!isAdmin && (
+                <span className="text-[10px] text-muted-foreground">
+                  by {product.artisanName}
+                </span>
               )}
             </div>
             {/* Mobile-only info */}
@@ -261,8 +278,9 @@ export function ManageProducts({ userId }: ManageProductsProps) {
 
       {/* Footer count */}
       <div className="pt-4 text-sm text-muted-foreground text-center md:text-left">
-        {products.length} {products.length === 1 ? "product" : "products"}{" "}
-        listed
+        {isAdmin ? "All" : "Your"} {products.length}{" "}
+        {products.length === 1 ? "product" : "products"}
+        {isAdmin ? " on the platform" : " listed"}
       </div>
     </div>
   );
