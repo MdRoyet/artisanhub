@@ -19,19 +19,19 @@ const contactInfo = [
   {
     icon: Phone,
     label: "Phone",
-    value: "+91 123 456 7890",
-    href: "tel:+911234567890",
+    value: "+1 (123) 456-7890",
+    href: "tel:+11234567890",
   },
   {
     icon: MapPin,
     label: "Address",
-    value: "123 Artisan Lane, Craft District, Jaipur 302001, India",
+    value: "123 Artisan Lane, Craftsville, USA",
     href: null,
   },
   {
     icon: Clock,
     label: "Business Hours",
-    value: "Mon-Fri: 9:00 AM - 6:00 PM IST",
+    value: "Mon-Fri: 9:00 AM - 6:00 PM EST",
     href: null,
   },
 ];

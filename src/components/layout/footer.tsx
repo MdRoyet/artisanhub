@@ -65,7 +65,7 @@ export function Footer() {
             <div className="space-y-3 text-sm text-secondary-foreground/70">
               <div className="flex items-center gap-3">
                 <MapPin className="h-4 w-4 shrink-0 text-accent" />
-                <span>123 Artisan Lane, Craft District, Jaipur 302001</span>
+                <span>123 Artisan Lane, Craftsville, USA</span>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="h-4 w-4 shrink-0 text-accent" />
@@ -82,7 +82,7 @@ export function Footer() {
                   href="tel:+911234567890"
                   className="hover:text-accent transition-colors"
                 >
-                  +91 123 456 7890
+                  +1 (123) 456-7890
                 </a>
               </div>
             </div>

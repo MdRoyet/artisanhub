@@ -84,7 +84,7 @@ export default function AboutPage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="relative aspect-[4/3] rounded-2xl overflow-hidden">
             <Image
-              src="https://images.unsplash.com/photo-1556442261-e5e1dade909e?w=800&q=80"
+              src="https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?w=800&q=80"
               alt="Artisan working in a workshop"
               fill
               className="object-cover"
