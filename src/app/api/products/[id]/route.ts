@@ -1,8 +1,6 @@
-// src/app/api/products/[id]/route.ts
-
 import { NextRequest, NextResponse } from "next/server";
 import { connectDB } from "@/lib/db";
-import { Product, Review } from "@/models";
+import { Product, Review, Category } from "@/models";
 import { extractTokenFromHeader, verifyToken } from "@/lib/jwt";
 import type { ApiResponse, ApiError } from "@/types";
 
@@ -25,7 +23,6 @@ export async function GET(
       return NextResponse.json(response, { status: 404 });
     }
 
-    // Get reviews for this product
     const reviews = await Review.find({ product: id })
       .sort({ createdAt: -1 })
       .lean();
@@ -85,7 +82,6 @@ export async function DELETE(
       return NextResponse.json(response, { status: 404 });
     }
 
-    // Only allow artisan who created it or admin to delete
     if (
       product.artisan.toString() !== decoded.userId &&
       decoded.role !== "admin"
@@ -97,17 +93,11 @@ export async function DELETE(
       return NextResponse.json(response, { status: 403 });
     }
 
-    // Delete associated reviews
     await Review.deleteMany({ product: id });
-
-    // Delete product
     await Product.findByIdAndDelete(id);
 
-    // Update category count
     const count = await Product.countDocuments({ category: product.category });
-    await require("@/models").Category.findByIdAndUpdate(product.category, {
-      productCount: count,
-    });
+    await Category.findByIdAndUpdate(product.category, { productCount: count });
 
     const apiResponse: ApiResponse<null> = {
       success: true,
