@@ -1,9 +1,35 @@
 export default function Loading() {
   return (
-    <div className="min-h-screen flex items-center justify-center">
-      <div className="flex flex-col items-center gap-4">
-        <div className="w-10 h-10 border-4 border-primary border-t-transparent rounded-full animate-spin" />
-        <p className="text-sm text-muted-foreground font-medium">Loading...</p>
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        minHeight: "100vh",
+      }}
+    >
+      <div style={{ textAlign: "center" }}>
+        <div
+          style={{
+            width: 40,
+            height: 40,
+            border: "4px solid #e2e8f0",
+            borderTopColor: "#D97706",
+            borderRadius: "9999px",
+            animation: "spin 0.8s linear infinite",
+          }}
+        />
+        <p
+          style={{
+            marginTop: 16,
+            fontSize: 14,
+            color: "#64748b",
+            fontWeight: 500,
+          }}
+        >
+          Loading...
+        </p>
+        <style>{`@keyframes spin { to { transform: rotate(360deg) } }`}</style>
       </div>
     </div>
   );

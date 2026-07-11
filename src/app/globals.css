@@ -116,6 +116,7 @@
     --input: 214 32% 91%;
     --ring: 38 92% 50%;
     --radius: 0.625rem;
+    scroll-behavior: smooth;
   }
 
   * {
@@ -151,4 +152,39 @@
   .container-tight {
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--muted));
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground) / 0.5);
+}
+
+/* Remove number input spinners */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Text selection color */
+::selection {
+  background: hsl(var(--primary) / 0.2);
+  color: hsl(var(--secondary));
 }
