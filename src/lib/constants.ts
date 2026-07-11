@@ -97,3 +97,75 @@ export const HERO_SLIDES = [
       "https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=1200&q=80",
   },
 ] as const;
+
+export const TESTIMONIALS = [
+  {
+    name: "Sarah Mitchell",
+    role: "Interior Designer",
+    avatar:
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80",
+    comment:
+      "ArtisanHub transformed my clients' homes. The terracotta dinner set and handwoven throws are always conversation starters. The quality is unmatched by anything I've found in retail stores.",
+    rating: 5,
+  },
+  {
+    name: "James Walker",
+    role: "Collector",
+    avatar:
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80",
+    comment:
+      "I've ordered six different pieces over the past year and each one exceeded my expectations. The hammered gold band is my daily wear now. You can feel the craftsmanship in every detail.",
+    rating: 5,
+  },
+  {
+    name: "Nina Kowalski",
+    role: "Fashion Stylist",
+    avatar:
+      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&q=80",
+    comment:
+      "The silk scarf I ordered has the most beautiful gradient I've ever seen. My clients always ask where I find these unique pieces. ArtisanHub is my secret weapon for styling.",
+    rating: 5,
+  },
+  {
+    name: "David Chen",
+    role: "Restaurant Owner",
+    avatar:
+      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&q=80",
+    comment:
+      "We replaced all our serving ware with ArtisanHub pieces. The block-printed cotton throws and Blue Willow platters give our restaurant an authentic, curated feel that our customers love.",
+    rating: 4,
+  },
+] as const;
+
+export const FAQ_ITEMS = [
+  {
+    question: "Are the products truly handcrafted?",
+    answer:
+      "Yes, every product on ArtisanHub is made entirely by hand. We work directly with artisans who use traditional techniques passed down through generations. No two pieces are exactly alike, which is part of their charm and value.",
+  },
+  {
+    question: "How long does shipping take?",
+    answer:
+      "Since each item is made to order or sourced from artisan workshops, please allow 7-14 business days for domestic orders and 14-21 business days for international orders. You will receive tracking information once your order ships.",
+  },
+  {
+    question: "What is your return policy?",
+    answer:
+      "We accept returns within 30 days of delivery for items in their original condition. Due to the handmade nature of our products, slight variations in color, size, and texture are not considered defects but rather hallmarks of authentic craftsmanship.",
+  },
+  {
+    question: "How do I care for my handcrafted item?",
+    answer:
+      "Each product comes with specific care instructions. Generally, hand-washing is recommended for ceramics and textiles. Leather goods should be kept dry and conditioned periodically. Wood items should be treated with food-safe mineral oil every few months.",
+  },
+  {
+    question: "Can I commission a custom piece?",
+    answer:
+      "Many of our artisans accept custom commissions. You can browse their profiles and reach out directly through the 'Contact Artisan' button on any product page. Custom orders typically take 3-6 weeks depending on complexity.",
+  },
+  {
+    question: "How are artisans verified on ArtisanHub?",
+    answer:
+      "We have a rigorous vetting process that includes studio visits, quality assessments of their work, and verification of their techniques and materials. We only partner with artisans who meet our standards for skill, ethical sourcing, and sustainable practices.",
+  },
+] as const;
