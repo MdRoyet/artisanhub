@@ -13,7 +13,7 @@ export const categories = [
     description:
       "Unique handcrafted jewelry featuring precious metals, gemstones, and organic materials shaped into wearable art by skilled metalsmiths and designers.",
     image:
-      "https://images.unsplash.com/photo-1515562141589-67f0d569b6c3?w=800&q=80",
+      "https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=800&q=80",
   },
   {
     name: "Textiles",
@@ -21,7 +21,7 @@ export const categories = [
     description:
       "Woven, dyed, and embroidered textiles created on handlooms using time-honored patterns and natural fibers sourced from local communities.",
     image:
-      "https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&q=80",
+      "https://images.unsplash.com/photo-1528459105426-b9548367069b?w=800&q=80",
   },
   {
     name: "Woodwork",
@@ -29,7 +29,7 @@ export const categories = [
     description:
       "Carved, turned, and joined wooden pieces made from sustainably harvested hardwoods, finished with natural oils and traditional joinery methods.",
     image:
-      "https://images.unsplash.com/photo-1566312922674-2e341c735324?w=800&q=80",
+      "https://images.unsplash.com/photo-1556442261-e5e1dade909e?w=800&q=80",
   },
   {
     name: "Leather Goods",
@@ -37,7 +37,7 @@ export const categories = [
     description:
       "Hand-stitched leather goods crafted from full-grain vegetable-tanned leather, developing a beautiful patina with age and use.",
     image:
-      "https://images.unsplash.com/photo-1473188588951-bf9b1fb25449?w=800&q=80",
+      "https://images.unsplash.com/photo-1596568860170-00ef9c043d71?w=800&q=80",
   },
   {
     name: "Metalwork",

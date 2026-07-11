@@ -1,4 +1,4 @@
-// src/lib/constants.ts
+﻿// src/lib/constants.ts
 
 export const APP_NAME = "ArtisanHub";
 export const APP_DESCRIPTION =
@@ -17,17 +17,17 @@ export const SORT_OPTIONS = [
 
 export const RATING_FILTER_OPTIONS = [
   { label: "All Ratings", value: "" },
-  { label: "4★ & above", value: "4" },
-  { label: "3★ & above", value: "3" },
-  { label: "2★ & above", value: "2" },
+  { label: "4â˜… & above", value: "4" },
+  { label: "3â˜… & above", value: "3" },
+  { label: "2â˜… & above", value: "2" },
 ] as const;
 
 export const PRICE_RANGES = [
   { label: "All Prices", value: "" },
   { label: "Under $25", min: "0", max: "25" },
-  { label: "$25 – $50", min: "25", max: "50" },
-  { label: "$50 – $100", min: "50", max: "100" },
-  { label: "$100 – $200", min: "100", max: "200" },
+  { label: "$25 â€“ $50", min: "25", max: "50" },
+  { label: "$50 â€“ $100", min: "50", max: "100" },
+  { label: "$100 â€“ $200", min: "100", max: "200" },
   { label: "Over $200", min: "200", max: "" },
 ] as const;
 
@@ -103,7 +103,7 @@ export const TESTIMONIALS = [
     name: "Sarah Mitchell",
     role: "Interior Designer",
     avatar:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&q=80",
+      "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?w=200&q=80",
     comment:
       "ArtisanHub transformed my clients' homes. The terracotta dinner set and handwoven throws are always conversation starters. The quality is unmatched by anything I've found in retail stores.",
     rating: 5,
@@ -112,7 +112,7 @@ export const TESTIMONIALS = [
     name: "James Walker",
     role: "Collector",
     avatar:
-      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&q=80",
+      "https://images.unsplash.com/photo-1556442261-e5e1dade909e?w=200&q=80",
     comment:
       "I've ordered six different pieces over the past year and each one exceeded my expectations. The hammered gold band is my daily wear now. You can feel the craftsmanship in every detail.",
     rating: 5,
@@ -121,7 +121,7 @@ export const TESTIMONIALS = [
     name: "Nina Kowalski",
     role: "Fashion Stylist",
     avatar:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=200&q=80",
+      "https://images.unsplash.com/photo-1610701596007-11502861dcfa?w=200&q=80",
     comment:
       "The silk scarf I ordered has the most beautiful gradient I've ever seen. My clients always ask where I find these unique pieces. ArtisanHub is my secret weapon for styling.",
     rating: 5,
@@ -130,7 +130,7 @@ export const TESTIMONIALS = [
     name: "David Chen",
     role: "Restaurant Owner",
     avatar:
-      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=200&q=80",
+      "https://images.unsplash.com/photo-1493106641515-6b5631de4bb9?w=200&q=80",
     comment:
       "We replaced all our serving ware with ArtisanHub pieces. The block-printed cotton throws and Blue Willow platters give our restaurant an authentic, curated feel that our customers love.",
     rating: 4,
