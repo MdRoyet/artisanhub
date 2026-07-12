@@ -1,4 +1,4 @@
-// src/app/(main)/page.tsx
+export const dynamic = "force-dynamic";
 
 import { connectDB } from "@/lib/db";
 import { Category, Product } from "@/models";
@@ -26,7 +26,7 @@ export default async function HomePage() {
   // Calculate stats from DB
   const totalProducts = await Product.countDocuments();
   const totalCategories = await Category.countDocuments();
-  const totalArtisans = await Product.distinct("artisan").length;
+  const totalArtisans = (await Product.distinct("artisan")).length;
   const avgRatingResult = await Product.aggregate([
     { $group: { _id: null, avgRating: { $avg: "$rating" } } },
   ]);

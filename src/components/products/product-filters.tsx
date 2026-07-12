@@ -84,7 +84,9 @@ export function ProductFilters({
         {/* Category */}
         <Select
           value={category}
-          onValueChange={(v) => setCategory(v === "__none__" ? "" : v)}
+          onValueChange={(v) =>
+            setCategory(v === "__none__" || v == null ? "" : v)
+          }
         >
           <SelectTrigger className="w-[155px] h-9 text-sm">
             <SelectValue placeholder="All Categories" />
@@ -131,7 +133,10 @@ export function ProductFilters({
         {/* Rating */}
         <Select
           value={rating}
-          onValueChange={(v) => setRating(v === "__none__" ? "" : v)}
+          onValueChange={(v) => {
+            const value = v === "__none__" || v == null ? "" : v;
+            setRating(value);
+          }}
         >
           <SelectTrigger className="w-[155px] h-9 text-sm">
             <SelectValue placeholder="Any Rating" />
@@ -150,7 +155,7 @@ export function ProductFilters({
         <div className="hidden sm:block w-px h-5 bg-border mx-1" />
 
         {/* Sort */}
-        <Select value={sort} onValueChange={setSort}>
+        <Select value={sort} onValueChange={(value) => setSort(value ?? "")}>
           <SelectTrigger className="w-[180px] h-9 text-sm">
             <SelectValue />
           </SelectTrigger>

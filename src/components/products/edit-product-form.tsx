@@ -38,7 +38,7 @@ export function EditProductForm({
   const [shortDescription, setShortDescription] = useState("");
   const [fullDescription, setFullDescription] = useState("");
   const [price, setPrice] = useState("");
-  const [category, setCategory] = useState("");
+  const [category, setCategory] = useState<string | null>(null);
   const [images, setImages] = useState("");
   const [location, setLocation] = useState("");
   const [featured, setFeatured] = useState(false);

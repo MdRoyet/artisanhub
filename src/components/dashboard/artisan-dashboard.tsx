@@ -186,10 +186,7 @@ export function ArtisanDashboard() {
                       border: "1px solid #e5e7eb",
                       fontSize: "12px",
                     }}
-                    formatter={(value: number) => [
-                      `${value} products`,
-                      "Added",
-                    ]}
+                    formatter={(value) => [`${value} products`, "Added"]}
                   />
                   <Area
                     type="monotone"
@@ -303,10 +300,7 @@ export function ArtisanDashboard() {
                         border: "1px solid #e5e7eb",
                         fontSize: "12px",
                       }}
-                      formatter={(value: number, name: string) => [
-                        `${value} items`,
-                        name,
-                      ]}
+                      formatter={(value, name) => [`${value} items`, name]}
                     />
                   </PieChart>
                 </ResponsiveContainer>

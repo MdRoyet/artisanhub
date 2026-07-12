@@ -4,14 +4,8 @@ import { NextRequest, NextResponse } from "next/server";
 import { connectDB } from "@/lib/db";
 import { Product, Category } from "@/models";
 import { extractTokenFromHeader, verifyToken } from "@/lib/jwt";
-import type {
-  ApiResponse,
-  ApiError,
-  PaginatedResponse,
-  ProductFilters,
-} from "@/types";
+import type { ApiResponse, ApiError, PaginatedResponse } from "@/types";
 import { productSchema } from "@/lib/validations";
-import type { FilterQuery, SortOrder } from "mongoose";
 
 // GET /api/products?search=&category=&minPrice=&maxPrice=&rating=&sort=&page=&limit=&featured=
 export async function GET(req: NextRequest) {
@@ -34,7 +28,7 @@ export async function GET(req: NextRequest) {
     await connectDB();
 
     // Build filter query
-    const filter: FilterQuery<typeof Product> = {};
+    const filter: Record<string, any> = {};
 
     // Search by title or description
     if (search) {
@@ -54,17 +48,17 @@ export async function GET(req: NextRequest) {
     }
 
     // Filter by price range
-    if (minPrice && !isNaN(Number(minPrice))) {
-      filter.price = {
-        ...((filter.price as object) || {}),
-        $gte: Number(minPrice),
-      };
-    }
-    if (maxPrice && !isNaN(Number(maxPrice))) {
-      filter.price = {
-        ...((filter.price as object) || {}),
-        $lte: Number(maxPrice),
-      };
+    if (
+      (minPrice && !isNaN(Number(minPrice))) ||
+      (maxPrice && !isNaN(Number(maxPrice)))
+    ) {
+      filter.price = {};
+      if (minPrice && !isNaN(Number(minPrice))) {
+        filter.price.$gte = Number(minPrice);
+      }
+      if (maxPrice && !isNaN(Number(maxPrice))) {
+        filter.price.$lte = Number(maxPrice);
+      }
     }
 
     // Filter by minimum rating
@@ -78,7 +72,7 @@ export async function GET(req: NextRequest) {
     }
 
     // Build sort
-    let sortObj: Record<string, SortOrder> = { createdAt: -1 };
+    let sortObj: Record<string, 1 | -1> = { createdAt: -1 };
     switch (sort) {
       case "oldest":
         sortObj = { createdAt: 1 };
@@ -178,10 +172,10 @@ export async function POST(req: NextRequest) {
     }
 
     // Parse images (comma-separated URLs)
-    const images = result.data.images
+    let images = result.data.images
       .split(",")
-      .map((url) => url.trim())
-      .filter((url) => url.length > 0);
+      .map((url: string) => url.trim())
+      .filter((url: string) => url.length > 0);
 
     if (images.length === 0) {
       images.push(

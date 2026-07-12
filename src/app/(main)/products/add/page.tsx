@@ -1,3 +1,4 @@
+export const dynamic = "force-dynamic";
 import { connectDB } from "@/lib/db";
 import { Category } from "@/models";
 import { AuthGuard } from "@/components/layout/auth-guard";

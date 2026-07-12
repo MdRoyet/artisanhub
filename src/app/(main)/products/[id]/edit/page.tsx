@@ -1,3 +1,5 @@
+export const dynamic = "force-dynamic";
+
 import { notFound } from "next/navigation";
 import { connectDB } from "@/lib/db";
 import { Product } from "@/models";

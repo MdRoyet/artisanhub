@@ -22,7 +22,7 @@ export function FAQSection() {
         </div>
 
         <div className="max-w-3xl mx-auto">
-          <Accordion type="single" className="w-full">
+          <Accordion className="w-full">
             {FAQ_ITEMS.map((item, i) => (
               <AccordionItem key={i} value={`item-${i}`}>
                 <AccordionTrigger className="text-left font-semibold text-foreground hover:text-primary">

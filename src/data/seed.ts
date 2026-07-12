@@ -28,11 +28,20 @@ async function seed() {
 
   console.log("[seed] Seeding users...");
   const createdUsers = await User.create(users);
-  const userMap = new Map(createdUsers.map((u) => [u.email, u._id]));
+  const userMap = new Map(
+    createdUsers.map((u: { email: string; _id: mongoose.Types.ObjectId }) => [
+      u.email,
+      u._id,
+    ]),
+  );
 
   console.log("[seed] Seeding categories...");
   const createdCategories = await Category.create(categories);
-  const categoryMap = new Map(createdCategories.map((c) => [c.slug, c._id]));
+  const categoryMap = new Map<string, mongoose.Types.ObjectId>(
+    createdCategories.map(
+      (c: { slug: string; _id: mongoose.Types.ObjectId }) => [c.slug, c._id],
+    ),
+  );
 
   console.log("[seed] Seeding products...");
   const productsWithIds = products.map((p) => ({
@@ -49,7 +58,11 @@ async function seed() {
   );
 
   const createdProducts = await Product.create(cleanProducts);
-  const productMap = new Map(createdProducts.map((p) => [p.title, p._id]));
+  const productMap = new Map<string, mongoose.Types.ObjectId>(
+    createdProducts.map(
+      (p: { title: string; _id: mongoose.Types.ObjectId }) => [p.title, p._id],
+    ),
+  );
 
   console.log("[seed] Seeding reviews...");
   const userIds = Array.from(userMap.values());
