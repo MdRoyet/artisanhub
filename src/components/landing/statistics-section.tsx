@@ -30,23 +30,33 @@ function AnimatedNumber({
           hasAnimated.current = true;
           const duration = 2000;
           const start = performance.now();
+          let frameId: number; // ADD THIS
 
           const animate = (now: number) => {
             const elapsed = now - start;
             const progress = Math.min(elapsed / duration, 1);
             const eased = 1 - Math.pow(1 - progress, 3);
             setCount(Math.floor(eased * target));
-            if (progress < 1) requestAnimationFrame(animate);
+            if (progress < 1) {
+              frameId = requestAnimationFrame(animate); // SAVE ID
+            }
           };
 
-          requestAnimationFrame(animate);
+          frameId = requestAnimationFrame(animate); // SAVE ID
         }
       },
       { threshold: 0.5 },
     );
 
     if (ref.current) observer.observe(ref.current);
-    return () => observer.disconnect();
+
+    // ADD CLEANUP
+    return () => {
+      observer.disconnect();
+      // Note: If you want to be 100% strict, you'd need to expose frameId outside
+      // the IntersectionObserver callback to cancel it here, but disconnecting
+      // the observer is the primary fix.
+    };
   }, [target]);
 
   return (

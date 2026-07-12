@@ -59,7 +59,7 @@ export function HeroSection() {
       <div className="relative z-10 flex h-full items-center justify-center text-center px-4">
         <div
           className={cn(
-            "max-w-3xl space-y-6 transition-all duration-600",
+            "max-w-3xl space-y-6 transition-all duration-700",
             isTransitioning
               ? "opacity-0 translate-y-4"
               : "opacity-100 translate-y-0",
