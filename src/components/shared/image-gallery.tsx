@@ -145,8 +145,7 @@ export function ImageGallery({ images, title }: ImageGalleryProps) {
                   strokeLinejoin="round"
                 >
                   <circle cx="11" cy="11" r="8" />
-                  <path d="m21 21-4.3-4.3-8.6-8.6-18 0-18-18 18h18" />
-                  <circle cx="11" cy="11" r="4" />
+                  <path d="M21 21l-4.35-4.35" />
                 </svg>
                 <p className="text-xs font-medium">Hover over image to zoom</p>
               </div>

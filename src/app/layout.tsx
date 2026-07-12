@@ -1,10 +1,10 @@
-// src/app/layout.tsx
-
 import type { Metadata, Viewport } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/sonner";
 import { AuthProvider } from "@/context/auth-context";
+import { QuickViewProvider } from "@/components/products/quick-view-context";
+import { QuickViewModal } from "@/components/products/quick-view-modal";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     template: "%s | ArtisanHub",
   },
   description:
-    "Discover unique handcrafted products from skilled artisans. Pottery, jewelry, textiles, woodwork and more. Fair prices, worldwide shipping.",
+    "Discover unique handcrafted products from skilled artisans. Pottery, jewelry, textiles, woodwork and more.",
   keywords: [
     "handcrafted",
     "artisan",
@@ -70,11 +70,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={`${inter.variable} ${playfair.variable}`}>
+    <html
+      lang="en"
+      data-scroll-behavior="smooth"
+      className={`${inter.variable} ${playfair.variable}`}
+    >
       <body className="min-h-screen flex flex-col">
         <AuthProvider>
-          <div className="flex-1">{children}</div>
-          <Toaster richColors position="top-right" />
+          <QuickViewProvider>
+            <div className="flex-1">{children}</div>
+            <QuickViewModal></QuickViewModal>
+            <Toaster richColors position="top-right" />
+          </QuickViewProvider>
         </AuthProvider>
       </body>
     </html>
