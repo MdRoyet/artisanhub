@@ -44,3 +44,6 @@ next-env.d.ts
 # added to existing .gitignore
 .env.local
 .env*.local
+
+.vercel
+.env*
