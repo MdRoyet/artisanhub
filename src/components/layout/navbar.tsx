@@ -1,5 +1,3 @@
-// src/components/layout/navbar.tsx
-
 "use client";
 
 import { useState } from "react";
@@ -17,7 +15,10 @@ export function Navbar() {
   const pathname = usePathname();
   const [mobileOpen, setMobileOpen] = useState(false);
 
-  const links = isAuthenticated ? NAV_LINKS_AUTHENTICATED : NAV_LINKS_PUBLIC;
+  // ✅ DYNAMIC LINKS: Adds "Dashboard" to the front of the list for logged-in users
+  const links = isAuthenticated
+    ? [{ href: "/dashboard", label: "Dashboard" }, ...NAV_LINKS_AUTHENTICATED]
+    : NAV_LINKS_PUBLIC;
 
   return (
     <>
@@ -53,7 +54,7 @@ export function Navbar() {
             {isAuthenticated ? (
               <div className="flex items-center gap-3">
                 <div className="flex items-center gap-2">
-                  <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center">
+                  <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center overflow-hidden">
                     {user?.avatar ? (
                       <img
                         src={user.avatar}
