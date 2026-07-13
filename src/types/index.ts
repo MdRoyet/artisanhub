@@ -8,6 +8,8 @@ export type {
 } from "./user";
 export type { Category } from "./category";
 export type { Review } from "./review";
+export type { Question } from "./question";
+export type { Order, OrderItem, OrderStatus } from "./order";
 export type {
   ApiResponse,
   ApiError,

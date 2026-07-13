@@ -6,9 +6,12 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { RatingStars } from "@/components/shared/rating-stars";
 import { useQuickView } from "@/components/products/quick-view-context";
+import { useCart } from "@/context/cart-context";
+import { useWishlist } from "@/context/wishlist-context";
 import { formatPrice } from "@/lib/utils";
 import type { Product } from "@/types";
-import { Eye, ShoppingCart, MapPin } from "lucide-react";
+import { Eye, ShoppingCart, MapPin, Heart } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 interface ProductCardProps {
   product: Product;
@@ -16,6 +19,9 @@ interface ProductCardProps {
 
 export function ProductCard({ product }: ProductCardProps) {
   const { openQuickView } = useQuickView();
+  const { addItem } = useCart();
+  const { toggleItem, isInWishlist } = useWishlist();
+  const inWishlist = isInWishlist(product._id);
 
   return (
     <div className="group flex flex-col bg-background rounded-xl border shadow-sm overflow-hidden hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
@@ -48,6 +54,24 @@ export function ProductCard({ product }: ProductCardProps) {
           </div>
         )}
 
+        {/* Wishlist Button */}
+        <button
+          onClick={(e) => {
+            e.preventDefault();
+            toggleItem(product);
+          }}
+          className={cn(
+            "absolute top-3 right-3 w-8 h-8 rounded-full flex items-center justify-center transition-all",
+            product.featured ? "top-12" : "top-3",
+            inWishlist
+              ? "bg-primary text-primary-foreground"
+              : "bg-background/90 backdrop-blur-sm text-foreground hover:bg-background",
+          )}
+          aria-label={inWishlist ? "Remove from wishlist" : "Add to wishlist"}
+        >
+          <Heart className={cn("h-4 w-4", inWishlist && "fill-current")} />
+        </button>
+
         {/* Hover Overlay */}
         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
 
@@ -70,7 +94,7 @@ export function ProductCard({ product }: ProductCardProps) {
             className="shadow-lg"
             onClick={(e) => {
               e.preventDefault();
-              openQuickView(product._id);
+              addItem(product);
             }}
           >
             <ShoppingCart className="h-3.5 w-3.5" />

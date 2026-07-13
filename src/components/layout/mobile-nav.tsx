@@ -6,9 +6,11 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useAuth } from "@/context/auth-context";
 import { useTheme } from "@/context/theme-context";
+import { useCart } from "@/context/cart-context";
+import { useWishlist } from "@/context/wishlist-context";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { LogOut, User, Sun, Moon } from "lucide-react";
+import { LogOut, User, Sun, Moon, ShoppingCart, Heart, Package } from "lucide-react";
 import { NAV_LINKS_PUBLIC, NAV_LINKS_AUTHENTICATED } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 
@@ -20,6 +22,8 @@ interface MobileNavProps {
 export function MobileNav({ isOpen, onClose }: MobileNavProps) {
   const { isAuthenticated, user, logout } = useAuth();
   const { theme, toggleTheme } = useTheme();
+  const { totalItems: cartItems } = useCart();
+  const { totalItems: wishlistItems } = useWishlist();
   const pathname = usePathname();
 
   const links = isAuthenticated ? NAV_LINKS_AUTHENTICATED : NAV_LINKS_PUBLIC;
@@ -64,6 +68,64 @@ export function MobileNav({ isOpen, onClose }: MobileNavProps) {
           )}
           {theme === "light" ? "Dark Mode" : "Light Mode"}
         </button>
+
+        <Link
+          href="/wishlist"
+          onClick={onClose}
+          className={cn(
+            "flex items-center justify-between px-4 py-3 rounded-lg text-base font-medium transition-colors",
+            pathname === "/wishlist"
+              ? "bg-primary/10 text-primary"
+              : "text-muted-foreground hover:bg-muted hover:text-foreground",
+          )}
+        >
+          <span className="flex items-center gap-3">
+            <Heart className="h-5 w-5" />
+            Wishlist
+          </span>
+          {wishlistItems > 0 && (
+            <span className="w-6 h-6 rounded-full bg-primary text-primary-foreground text-xs font-bold flex items-center justify-center">
+              {wishlistItems}
+            </span>
+          )}
+        </Link>
+
+        <Link
+          href="/cart"
+          onClick={onClose}
+          className={cn(
+            "flex items-center justify-between px-4 py-3 rounded-lg text-base font-medium transition-colors",
+            pathname === "/cart"
+              ? "bg-primary/10 text-primary"
+              : "text-muted-foreground hover:bg-muted hover:text-foreground",
+          )}
+        >
+          <span className="flex items-center gap-3">
+            <ShoppingCart className="h-5 w-5" />
+            Cart
+          </span>
+          {cartItems > 0 && (
+            <span className="w-6 h-6 rounded-full bg-primary text-primary-foreground text-xs font-bold flex items-center justify-center">
+              {cartItems}
+            </span>
+          )}
+        </Link>
+
+        {isAuthenticated && (
+          <Link
+            href="/orders"
+            onClick={onClose}
+            className={cn(
+              "flex items-center gap-3 px-4 py-3 rounded-lg text-base font-medium transition-colors",
+              pathname === "/orders"
+                ? "bg-primary/10 text-primary"
+                : "text-muted-foreground hover:bg-muted hover:text-foreground",
+            )}
+          >
+            <Package className="h-5 w-5" />
+            My Orders
+          </Link>
+        )}
 
         <Separator className="my-4" />
 

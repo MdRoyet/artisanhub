@@ -12,6 +12,7 @@ import { TestimonialsSection } from "@/components/landing/testimonials-section";
 import { NewsletterSection } from "@/components/landing/newsletter-section";
 import { FAQSection } from "@/components/landing/faq-section";
 import { CTASection } from "@/components/landing/cta-section";
+import { RecentlyViewedProducts } from "@/components/shared/recently-viewed-products";
 
 export default async function HomePage() {
   await connectDB();
@@ -57,6 +58,7 @@ export default async function HomePage() {
       <NewsletterSection />
       <FAQSection />
       <CTASection />
+      <RecentlyViewedProducts />
     </>
   );
 }

@@ -4,8 +4,11 @@ import "./globals.css";
 import { Toaster } from "@/components/ui/sonner";
 import { AuthProvider } from "@/context/auth-context";
 import { ThemeProvider } from "@/context/theme-context";
+import { CartProvider } from "@/context/cart-context";
+import { WishlistProvider } from "@/context/wishlist-context";
 import { QuickViewProvider } from "@/components/products/quick-view-context";
 import { QuickViewModal } from "@/components/products/quick-view-modal";
+import { BackToTop } from "@/components/shared/back-to-top";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -79,11 +82,16 @@ export default function RootLayout({
       <body className="min-h-screen flex flex-col">
         <ThemeProvider>
           <AuthProvider>
-            <QuickViewProvider>
-              <div className="flex-1">{children}</div>
-              <QuickViewModal></QuickViewModal>
-              <Toaster richColors position="top-right" />
-            </QuickViewProvider>
+            <CartProvider>
+              <WishlistProvider>
+                <QuickViewProvider>
+                  <div className="flex-1">{children}</div>
+                  <QuickViewModal />
+                  <BackToTop />
+                  <Toaster richColors position="top-right" />
+                </QuickViewProvider>
+              </WishlistProvider>
+            </CartProvider>
           </AuthProvider>
         </ThemeProvider>
       </body>

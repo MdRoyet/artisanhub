@@ -10,6 +10,8 @@ import { Menu, LogOut, User, Sun, Moon } from "lucide-react";
 import { NAV_LINKS_PUBLIC, NAV_LINKS_AUTHENTICATED } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import { MobileNav } from "./mobile-nav";
+import { CartIcon } from "@/components/shared/cart-icon";
+import { WishlistIcon } from "@/components/shared/wishlist-icon";
 
 export function Navbar() {
   const { isAuthenticated, user, logout } = useAuth();
@@ -65,6 +67,8 @@ export function Navbar() {
                 <Sun className="h-5 w-5" />
               )}
             </Button>
+            <WishlistIcon />
+            <CartIcon />
             {isAuthenticated ? (
               <div className="flex items-center gap-3">
                 <div className="flex items-center gap-2">

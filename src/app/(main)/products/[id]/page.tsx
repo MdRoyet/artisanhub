@@ -5,14 +5,16 @@ import { ImageGallery } from "@/components/shared/image-gallery";
 import { Breadcrumb } from "@/components/shared/breadcrumb";
 import { RatingStars } from "@/components/shared/rating-stars";
 import { ViewCounter } from "@/components/shared/view-counter";
+import { ProductActions } from "@/components/shared/product-actions";
 import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { formatPrice, formatDate } from "@/lib/utils";
 import { ProductGrid } from "@/components/products/product-grid";
 import type { Product as ProductType, Review as ReviewType } from "@/types";
 import type { Metadata } from "next";
 import { ReviewForm } from "@/components/shared/review-form";
+import { QuestionSection } from "@/components/shared/question-section";
+import { RecentlyViewedTracker } from "@/components/shared/recently-viewed-tracker";
 
 interface PageProps {
   params: Promise<{ id: string }>;
@@ -142,14 +144,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
           <Separator />
 
           {/* Action Buttons */}
-          <div className="flex gap-3 pt-2">
-            <Button size="lg" className="flex-1">
-              Add to Cart
-            </Button>
-            <Button size="lg" variant="outline">
-              Save
-            </Button>
-          </div>
+          <ProductActions product={serialized} />
         </div>
       </div>
 
@@ -228,6 +223,12 @@ export default async function ProductDetailPage({ params }: PageProps) {
           </div>
         )}
       </section>
+
+      {/* Questions Section */}
+      <QuestionSection productId={id} />
+
+      {/* Recently Viewed Tracker */}
+      <RecentlyViewedTracker product={serialized} />
 
       {/* Related Products */}
       {serializedRelated.length > 0 && (
