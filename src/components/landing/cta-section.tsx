@@ -16,14 +16,13 @@ export function CTASection() {
           <Button size="lg" variant="secondary" asChild>
             <Link href="/explore">Explore Collection</Link>
           </Button>
-          <Button
-            size="lg"
-            variant="outline"
-            className="border-secondary-foreground/30 text-secondary-foreground hover:bg-secondary-foreground/10"
-            asChild
+
+          <Link
+            href="/about"
+            className="inline-flex items-center justify-center h-11 px-8 rounded-md text-sm font-medium border border-white/30 text-white hover:bg-white hover:text-secondary transition-all duration-300"
           >
-            <Link href="/about">Learn More</Link>
-          </Button>
+            Learn More
+          </Link>
         </div>
       </div>
     </section>
