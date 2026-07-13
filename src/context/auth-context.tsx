@@ -103,6 +103,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
 
   const logout = useCallback(() => {
     localStorage.removeItem("token");
+    localStorage.removeItem("wishlist");
     setUser(null);
   }, []);
 

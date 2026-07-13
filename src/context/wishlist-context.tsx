@@ -10,6 +10,7 @@ import {
 } from "react";
 import type { Product } from "@/types";
 import { toast } from "sonner";
+import { useAuth } from "@/context/auth-context";
 
 interface WishlistContextType {
   items: Product[];
@@ -24,6 +25,14 @@ const WishlistContext = createContext<WishlistContextType | undefined>(undefined
 
 export function WishlistProvider({ children }: { children: ReactNode }) {
   const [items, setItems] = useState<Product[]>([]);
+  const { isAuthenticated } = useAuth();
+
+  // Clear wishlist when user logs out
+  useEffect(() => {
+    if (!isAuthenticated) {
+      setItems([]);
+    }
+  }, [isAuthenticated]);
 
   useEffect(() => {
     const stored = localStorage.getItem("wishlist");
