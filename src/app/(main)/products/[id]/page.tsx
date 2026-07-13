@@ -11,6 +11,7 @@ import { formatPrice, formatDate } from "@/lib/utils";
 import { ProductGrid } from "@/components/products/product-grid";
 import type { Product as ProductType, Review as ReviewType } from "@/types";
 import type { Metadata } from "next";
+import { ReviewForm } from "@/components/shared/review-form";
 
 interface PageProps {
   params: Promise<{ id: string }>;
@@ -176,6 +177,10 @@ export default async function ProductDetailPage({ params }: PageProps) {
           <h2 className="text-2xl font-heading font-bold text-secondary">
             Reviews ({serializedReviews.length})
           </h2>
+        </div>
+
+        <div className="mb-8">
+          <ReviewForm productId={id} />
         </div>
 
         {serializedReviews.length === 0 ? (

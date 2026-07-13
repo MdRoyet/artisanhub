@@ -81,3 +81,14 @@ export type LoginFormData = z.infer<typeof loginSchema>;
 export type RegisterFormData = z.infer<typeof registerSchema>;
 export type ProductFormSchema = z.infer<typeof productSchema>;
 export type ContactFormData = z.infer<typeof contactSchema>;
+
+export const reviewSchema = z.object({
+  rating: z
+    .number()
+    .min(1, "Please select at least 1 star")
+    .max(5, "Maximum 5 stars"),
+  comment: z
+    .string()
+    .min(10, "Comment must be at least 10 characters")
+    .max(1000, "Comment is too long"),
+});
