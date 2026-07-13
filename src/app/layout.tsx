@@ -3,6 +3,7 @@ import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/sonner";
 import { AuthProvider } from "@/context/auth-context";
+import { ThemeProvider } from "@/context/theme-context";
 import { QuickViewProvider } from "@/components/products/quick-view-context";
 import { QuickViewModal } from "@/components/products/quick-view-modal";
 
@@ -76,13 +77,15 @@ export default function RootLayout({
       className={`${inter.variable} ${playfair.variable}`}
     >
       <body className="min-h-screen flex flex-col">
-        <AuthProvider>
-          <QuickViewProvider>
-            <div className="flex-1">{children}</div>
-            <QuickViewModal></QuickViewModal>
-            <Toaster richColors position="top-right" />
-          </QuickViewProvider>
-        </AuthProvider>
+        <ThemeProvider>
+          <AuthProvider>
+            <QuickViewProvider>
+              <div className="flex-1">{children}</div>
+              <QuickViewModal></QuickViewModal>
+              <Toaster richColors position="top-right" />
+            </QuickViewProvider>
+          </AuthProvider>
+        </ThemeProvider>
       </body>
     </html>
   );
