@@ -58,10 +58,11 @@ export function ProductCard({ product }: ProductCardProps) {
         <button
           onClick={(e) => {
             e.preventDefault();
+            e.stopPropagation();
             toggleItem(product);
           }}
           className={cn(
-            "absolute top-3 right-3 w-8 h-8 rounded-full flex items-center justify-center transition-all",
+            "absolute top-3 right-3 w-8 h-8 rounded-full flex items-center justify-center transition-all z-10",
             product.featured ? "top-12" : "top-3",
             inWishlist
               ? "bg-primary text-primary-foreground"
@@ -76,7 +77,7 @@ export function ProductCard({ product }: ProductCardProps) {
         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors duration-300" />
 
         {/* Hover Action Buttons */}
-        <div className="absolute bottom-3 left-3 right-3 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 flex gap-2">
+        <div className="absolute bottom-3 left-3 right-3 opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300 flex gap-2 z-10">
           <Button
             size="sm"
             variant="secondary"
