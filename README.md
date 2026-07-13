@@ -1,36 +1,106 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ArtisanHub - Handcrafted Marketplace
 
-## Getting Started
+![Next.js](https://img.shields.io/badge/Next.js-16-black?style=flat-square&logo=next.js)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue?style=flat-square&logo=typescript)
+![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-4-38bdf8?style=flat-square&logo=tailwind-css)
+![MongoDB](https://img.shields.io/badge/MongoDB-8-47a248?style=flat-square&logo=mongodb)
+![Vercel](https://img.shields.io/badge/Vercel-Deployed-black?style=flat-square&logo=vercel)
 
-First, run the development server:
+A full-stack, production-ready e-commerce platform connecting skilled artisans with people who value authentic, handcrafted goods. Built with a modern tech stack focusing on clean architecture, type safety, and premium UI/UX.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Live Demo & Credentials
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+**Live URL:** [Your Vercel URL Here](https://artisanhub.vercel.app)
+**GitHub Repo:** [https://github.com/MdRoyet/artisanhub](https://github.com/MdRoyet/artisanhub)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Demo Accounts
+| Role | Email | Password |
+| :--- | :--- | :--- |
+| **User** | `demo@artisanhub.com` | `password123` |
+| **Admin** | `admin@artisanhub.com` | `admin123` |
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## Key Features
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Frontend & UI/UX
+*   **Design System:** Consistent 3-color palette (Amber, Brown, Gray) with uniform border radius and typography.
+*   **Fully Responsive:** Mobile-first design adapting seamlessly to tablets and desktops.
+*   **Skeleton Loaders:** Smooth loading states for product grids and dashboard data.
+*   **Image Gallery:** Interactive gallery with crosshair hover-to-zoom functionality.
+*   **Quick View Modal:** Preview product details without leaving the explore page.
+*   **Dynamic Charts:** Recharts dashboard visualizing real-time database metrics (Area, Bar, Pie charts).
+*   **Hero Slider:** Auto-playing, interactive image carousel with smooth transitions.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Backend & Architecture
+*   **TypeScript First:** Strict typing across frontend, backend, and database models.
+*   **Next.js App Router:** Utilizing Server Components for fast initial loads and Client Components for interactivity.
+*   **API Design:** RESTful API routes with standardized JSON responses.
+*   **Data Validation:** Zod schemas for secure login, registration, product creation, and review submission.
+*   **SEO Optimized:** Dynamic metadata generation, sitemap.xml, and robots.txt.
 
-## Deploy on Vercel
+### Authentication & Security
+*   **JWT Authentication:** Secure stateless auth with access tokens.
+*   **Route Protection:** AuthGuard component redirecting unauthenticated users.
+*   **Password Hashing:** Bcrypt hashing via Mongoose pre-save hooks.
+*   **Role-Based Access:** Distinct UI and capabilities for Users vs. Admins.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Core Pages (10+ Routes)
+*   **Landing Page:** 10 distinct sections (Hero, Features, Categories, Products, How it Works, Stats, Testimonials, Newsletter, FAQ, CTA).
+*   **Explore Page:** Advanced filtering (Category, Price, Rating), sorting, and pagination.
+*   **Product Details:** Image gallery, specs table, related items, and review system.
+*   **Dashboard:** Protected analytics page displaying live database aggregations.
+*   **Manage Products:** Table view for admins/users to edit or delete listings.
+*   **Additional Pages:** About, Contact (with form validation), Blog, Privacy Policy.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## Tech Stack
+
+| Category | Technology |
+| :--- | :--- |
+| **Framework** | Next.js 16 (App Router) |
+| **Language** | TypeScript |
+| **Styling** | Tailwind CSS 4, Shadcn UI |
+| **Database** | MongoDB (Mongoose ODM) |
+| **Authentication** | JWT (JSON Web Tokens) |
+| **Validation** | Zod |
+| **Charts** | Recharts |
+| **Icons** | Lucide React |
+| **Notifications** | Sonner (Toast) |
+| **Deployment** | Vercel, MongoDB Atlas |
+
+---
+
+## Project Structure
+
+```text
+src/
+├── app/
+│   ├── (auth)/          # Login & Register layouts
+│   ├── (main)/          # Main app layout (Navbar, Footer)
+│   │   ├── dashboard/   # Protected Recharts dashboard
+│   │   ├── explore/     # Product listing with filters
+│   │   └── products/    # Add, Manage, Details pages
+│   └── api/             # Next.js API Routes
+│       ├── auth/        # login, register, me
+│       ├── products/    # CRUD operations, [id] dynamic routes
+│       └── dashboard/   # Aggregation pipelines for stats
+├── components/
+│   ├── auth/            # Login/Register forms
+│   ├── dashboard/       # ArtisanDashboard (Recharts)
+│   ├── landing/         # 10 landing page sections
+│   ├── layout/          # Navbar, Footer, AuthGuard
+│   ├── products/        # Cards, Grids, Quick View Modal
+│   ├── shared/          # ImageGallery, RatingStars, ReviewForm
+│   └── ui/              # Shadcn UI primitives
+├── context/             # React Context (Auth)
+├── hooks/               # Custom hooks (useDebounce, useProducts)
+├── lib/                 # DB connection, JWT utils, Zod schemas
+├── models/              # Mongoose schemas (User, Product, Category, Review)
+├── types/               # Global TypeScript interfaces
+└── middleware.ts         # Next.js routing protection
+
+
