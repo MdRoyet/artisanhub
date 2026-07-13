@@ -9,6 +9,7 @@ export interface Product {
   images: string[];
   rating: number; // 0-5 average
   reviewCount: number;
+  viewCount: number;
   location: string;
   artisan: string; // User _id
   artisanName: string; // denormalized

@@ -4,6 +4,7 @@ import { Product, Review, Category } from "@/models";
 import { ImageGallery } from "@/components/shared/image-gallery";
 import { Breadcrumb } from "@/components/shared/breadcrumb";
 import { RatingStars } from "@/components/shared/rating-stars";
+import { ViewCounter } from "@/components/shared/view-counter";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
@@ -103,6 +104,12 @@ export default async function ProductDetailPage({ params }: PageProps) {
             size="md"
           />
 
+          {/* View Count */}
+          <ViewCounter
+            productId={id}
+            initialCount={serialized.viewCount}
+          />
+
           {/* Price */}
           <div className="text-3xl font-bold text-secondary">
             {formatPrice(serialized.price)}
@@ -167,6 +174,7 @@ export default async function ProductDetailPage({ params }: PageProps) {
           <SpecRow label="Rating" value={`${serialized.rating} out of 5`} />
           <SpecRow label="Location" value={serialized.location} />
           <SpecRow label="Artisan" value={serialized.artisanName} />
+          <SpecRow label="Views" value={`${serialized.viewCount} views`} />
           <SpecRow label="Listed On" value={formatDate(serialized.createdAt)} />
         </div>
       </section>

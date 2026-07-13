@@ -10,6 +10,7 @@ export interface IProductDocument extends Document {
   images: string[];
   rating: number;
   reviewCount: number;
+  viewCount: number;
   location: string;
   artisan: Types.ObjectId;
   artisanName: string;
@@ -71,6 +72,11 @@ const ProductSchema = new Schema<IProductDocument>(
       type: Number,
       default: 0,
       min: [0, "Review count cannot be negative"],
+    },
+    viewCount: {
+      type: Number,
+      default: 0,
+      min: [0, "View count cannot be negative"],
     },
     location: {
       type: String,
